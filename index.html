@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Colori di Martina | Candele artigianali</title>
+<meta name="description" content="Candele profumate e composizioni artigianali in cera Ecolive.">
+<style>
+:root {
+  --cream:#F5F3EB;
+  --sage:#E5E9DE;
+  --green:#455B46;
+  --dark:#344635;
+  --gold:#B7A47B;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--dark);
+  font-family:Georgia,serif;
+}
+header {
+  padding:25px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #e4e3d9;
+}
+.logo {font-size:25px;font-style:italic}
+.logo small {
+  display:block;font:10px Arial,sans-serif;
+  letter-spacing:3px;margin-top:7px;
+}
+nav a {
+  color:var(--green);text-decoration:none;
+  margin-left:20px;font:12px Arial;
+}
+.hero {
+  text-align:center;padding:75px 20px 35px;
+  max-width:850px;margin:auto;
+}
+.tag {
+  letter-spacing:3px;font:10px Arial;
+  color:#829078;
+}
+h1 {
+  font-size:clamp(34px,6vw,58px);
+  font-weight:normal;line-height:1.2;
+  margin:25px 0;
+}
+.hero p {
+  font:14px/1.8 Arial,sans-serif;
+  color:#788071;max-width:540px;margin: auto;
+}
+.hero img {
+  width:100%;height:420px;object-fit:cover;
+  margin-top:35px;border-radius:3px;
+}
+.button {
+  display:inline-block;background:var(--green);
+  color:white;text-decoration:none;
+  padding:15px 27px;margin-top:25px;
+  font:11px Arial;letter-spacing:1px;
+  border-radius:2px;
+}
+section {padding:65px 7%}
+.section-title {text-align:center;margin-bottom:35px}
+.section-title h2 {font-size:34px;font-weight:normal;font-style:italic}
+.section-title p {font:12px Arial;color:#899080}
+.products {
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:25px;max-width:950px;margin:auto;
+}
+.product {background:#EBEDE4;padding:12px}
+.product img {
+  width:100%;height:300px;object-fit:cover;
+  background:#DDE2D5;
+}
+.product h3 {font-size:21px;font-weight:normal}
+.product p {font:13px/1.7 Arial;color:#72796D}
+.price {font:16px Arial;color:var(--green)}
+.product a {
+  display:inline-block;color:var(--green);
+  font:12px Arial;margin-top:12px;
+}
+.about {
+  background:var(--sage);text-align:center;
+}
+.about p {
+  max-width:600px;margin:auto;
+  font:14px/1.9 Arial;color:#697465;
+}
+footer {
+  background:var(--green);color:var(--cream);
+  padding:45px 20px;text-align:center;
+}
+footer a {color:white;margin:12px;font:13px Arial}
+footer p {font:11px Arial;color:#dce2d6}
+@media(max-width:600px) {
+  header {padding:18px 5%}
+  nav a {margin-left:9px;font-size:10px}
+  .logo {font-size:20px}
+  .hero {padding-top:50px}
+  .hero img {height:290px}
+  .products {grid-template-columns:1fr}
+  .product img {height:330px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    I Colori di Martina
+    <small>ATELIER CERA ECOLIVE</small>
+  </div>
+  <nav>
+    <a href="#creazioni">CREAZIONI</a>
+    <a href="#contatti">CONTATTI</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="tag">✳ FATTO A MANO CON AMORE ✳</div>
+    <h1>Luce gentile, profumi della natura e cera d'oliva.</h1>
+    <p>
+      Benvenuti nel mio piccolo mondo creativo.
+      Candele profumate e composizioni in cera
+      realizzate con passione e cura per ogni dettaglio.
+    </p>
+    <a class="button" href="#creazioni">SCOPRI LE CREAZIONI</a>
+    <img src="https://placehold.co/1200x650/E5E9DE/455B46?text=Le+creazioni+di+Martina"
+         alt="Le creazioni di Martina">
+  </div>
+
+  <section id="creazioni">
+    <div class="section-title">
+      <div class="tag">IL MIO PICCOLO LABORATORIO</div>
+      <h2>Le mie creazioni</h2>
+      <p>Ogni dettaglio racconta una storia.</p>
+    </div>
+
+    <div class="products">
+      <article class="product">
+        <img src="https://placehold.co/600x700/E5E9DE/455B46?text=Creazione+01"
+             alt="Candela artistica">
+        <h3>Creazione 01</h3>
+        <p>Una creazione artigianale realizzata con cura.</p>
+        <div class="price">Prezzo su richiesta</div>
+        <a href="https://wa.me/393337183658?text=Vorrei%20informazioni%20sulla%20Creazione%2001">
+          CHIEDI INFORMAZIONI →
+        </a>
+      </article>
+
+      <article class="product">
+        <img src="https://placehold.co/600x700/E5E9DE/455B46?text=Creazione+02"
+             alt="Composizione in cera">
+        <h3>Creazione 02</h3>
+        <p>Una composizione decorativa fatta a mano.</p>
+        <div class="price">Prezzo su richiesta</div>
+        <a href="https://wa.me/393337183658?text=Vorrei%20informazioni%20sulla%20Creazione%2002">
+          CHIEDI INFORMAZIONI →
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-title">
+      <h2>La passione diventa creazione</h2>
+    </div>
+    <p>
+      I Colori di Martina nasce dall'amore per
+      i dettagli, i colori e le creazioni artigianali.
+      Ogni prodotto è pensato per portare un tocco
+      speciale nella tua casa o nei tuoi momenti importanti.
+    </p>
+  </section>
+</main>
+
+<footer id="contatti">
+  <h2 style="font-style:italic;font-weight:normal">I Colori di Martina</h2>
+  <p>PER INFORMAZIONI E ORDINI</p>
+  <a href="https://wa.me/393337183658">WHATSAPP</a>
+  <a href="https://www.instagram.com/i_coloridimartina/">INSTAGRAM</a>
+  <p>© I Colori di Martina</p>
+</footer>
+
+</body>
+</html>
