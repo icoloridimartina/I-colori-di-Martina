@@ -1,193 +1,1137 @@
-
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I Colori di Martina | Candele artigianali</title>
-<meta name="description" content="Candele profumate e composizioni artigianali in cera Ecolive.">
-<style>
-:root {
-  --cream:#F5F3EB;
-  --sage:#E5E9DE;
-  --green:#455B46;
-  --dark:#344635;
-  --gold:#B7A47B;
-}
-* {box-sizing:border-box}
-body {
-  margin:0;
-  background:var(--cream);
-  color:var(--dark);
-  font-family:Georgia,serif;
-}
-header {
-  padding:25px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #e4e3d9;
-}
-.logo {font-size:25px;font-style:italic}
-.logo small {
-  display:block;font:10px Arial,sans-serif;
-  letter-spacing:3px;margin-top:7px;
-}
-nav a {
-  color:var(--green);text-decoration:none;
-  margin-left:20px;font:12px Arial;
-}
-.hero {
-  text-align:center;padding:75px 20px 35px;
-  max-width:850px;margin:auto;
-}
-.tag {
-  letter-spacing:3px;font:10px Arial;
-  color:#829078;
-}
-h1 {
-  font-size:clamp(34px,6vw,58px);
-  font-weight:normal;line-height:1.2;
-  margin:25px 0;
-}
-.hero p {
-  font:14px/1.8 Arial,sans-serif;
-  color:#788071;max-width:540px;margin: auto;
-}
-.hero img {
-  width:100%;height:420px;object-fit:cover;
-  margin-top:35px;border-radius:3px;
-}
-.button {
-  display:inline-block;background:var(--green);
-  color:white;text-decoration:none;
-  padding:15px 27px;margin-top:25px;
-  font:11px Arial;letter-spacing:1px;
-  border-radius:2px;
-}
-section {padding:65px 7%}
-.section-title {text-align:center;margin-bottom:35px}
-.section-title h2 {font-size:34px;font-weight:normal;font-style:italic}
-.section-title p {font:12px Arial;color:#899080}
-.products {
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:25px;max-width:950px;margin:auto;
-}
-.product {background:#EBEDE4;padding:12px}
-.product img {
-  width:100%;height:300px;object-fit:cover;
-  background:#DDE2D5;
-}
-.product h3 {font-size:21px;font-weight:normal}
-.product p {font:13px/1.7 Arial;color:#72796D}
-.price {font:16px Arial;color:var(--green)}
-.product a {
-  display:inline-block;color:var(--green);
-  font:12px Arial;margin-top:12px;
-}
-.about {
-  background:var(--sage);text-align:center;
-}
-.about p {
-  max-width:600px;margin:auto;
-  font:14px/1.9 Arial;color:#697465;
-}
-footer {
-  background:var(--green);color:var(--cream);
-  padding:45px 20px;text-align:center;
-}
-footer a {color:white;margin:12px;font:13px Arial}
-footer p {font:11px Arial;color:#dce2d6}
-@media(max-width:600px) {
-  header {padding:18px 5%}
-  nav a {margin-left:9px;font-size:10px}
-  .logo {font-size:20px}
-  .hero {padding-top:50px}
-  .hero img {height:290px}
-  .products {grid-template-columns:1fr}
-  .product img {height:330px}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I colori di Martina | Creazioni Artigianali in Cera Ecolive</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        sage: {
+                            50: '#F6F8F5',
+                            100: '#EBF0E8',
+                            200: '#D6E1D0',
+                            300: '#B5C8AC',
+                            400: '#91AC85',
+                            500: '#729065',
+                            600: '#58724D',
+                            700: '#465B3E',
+                            800: '#394A33',
+                            900: '#2F3D2B',
+                        },
+                        cream: {
+                            50: '#FDFCFB',
+                            100: '#F9F6F0',
+                            200: '#F2ECE1',
+                            300: '#E6DCCB',
+                        },
+                        gold: {
+                            400: '#C8A97E',
+                            500: '#B39162',
+                            600: '#96764A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-padding-top: 5.5rem; }
+        img { display: block; }
+        @media (max-width: 640px) {
+            #creazioni { padding-top: 4rem; }
+            #creazioni .group article { border-radius: 1.35rem; }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-cream-50 text-sage-900 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
 
-<header>
-  <div class="logo">
-    I Colori di Martina
-    <small>ATELIER CERA ECOLIVE</small>
-  </div>
-  <nav>
-    <a href="#creazioni">CREAZIONI</a>
-    <a href="#contatti">CONTATTI</a>
-  </nav>
-</header>
+    <!-- Toast Notification Container (Sostituisce alert()) -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
-<main>
-  <div class="hero">
-    <div class="tag">✳ FATTO A MANO CON AMORE ✳</div>
-    <h1>Luce gentile, profumi della natura e cera d'oliva.</h1>
-    <p>
-      Benvenuti nel mio piccolo mondo creativo.
-      Candele profumate e composizioni in cera
-      realizzate con passione e cura per ogni dettaglio.
-    </p>
-    <a class="button" href="#creazioni">SCOPRI LE CREAZIONI</a>
-    <img src="https://placehold.co/1200x650/E5E9DE/455B46?text=Le+creazioni+di+Martina"
-         alt="Le creazioni di Martina">
-  </div>
+    <!-- Header & Navigazione -->
+    <header class="sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-sage-200/70 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center min-h-[5rem] py-2 gap-2">
+                <!-- Logo / Brand -->
+                <a href="#" class="flex items-center gap-2.5 sm:gap-3 group min-w-0">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-sage-100 border border-sage-300 flex items-center justify-center text-sage-700 group-hover:bg-sage-200 transition-colors">
+                        <!-- Icona foglia d'olivo stilizzata in SVG -->
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 21C12 21 5 16 5 9.5C5 5.35786 8.13401 2 12 2C15.866 2 19 5.35786 19 9.5C19 16 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 21V7" stroke-linecap="round"/>
+                            <path d="M12 14L15.5 10.5" stroke-linecap="round"/>
+                            <path d="M12 11L8.5 7.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <span class="font-serif text-xl sm:text-3xl font-semibold tracking-tight text-sage-900 block leading-tight truncate">I colori di Martina</span>
+                        <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-sage-600 font-medium block truncate">Atelier Cera Ecolive</span>
+                    </div>
+                </a>
 
-  <section id="creazioni">
-    <div class="section-title">
-      <div class="tag">IL MIO PICCOLO LABORATORIO</div>
-      <h2>Le mie creazioni</h2>
-      <p>Ogni dettaglio racconta una storia.</p>
+                <!-- Navigazione Desktop -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-sage-800">
+                    <a href="#creazioni" class="hover:text-sage-500 transition-colors py-2">Le Creazioni</a>
+                    <a href="#cera-ecolive" class="hover:text-sage-500 transition-colors py-2">La Cera Ecolive</a>
+                    <a href="#come-ordinare" class="hover:text-sage-500 transition-colors py-2">Come Ordinare</a>
+                    <a href="#contatti" class="hover:text-sage-500 transition-colors py-2">Contatti</a>
+                </nav>
+
+                <!-- Azioni Header: Modalità Gestione & Carrello -->
+                <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+                    <!-- Pulsante Modalità Gestione (per aggiungere/modificare creazioni e prezzi) -->
+                    <button id="toggle-manage-btn" onclick="toggleManageMode()" title="Aggiungi o modifica le tue creazioni" class="flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-medium border border-sage-300 bg-white text-sage-700 hover:bg-sage-100 transition-all shadow-sm">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-500"></i>
+                        <span class="hidden sm:inline" id="manage-btn-text">Gestisci Vetrine</span>
+                    </button>
+
+                    <!-- Pulsante Carrello / Lista Ordine -->
+                    <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-700 text-cream-50 hover:bg-sage-800 transition-all shadow-sm text-sm font-medium">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span class="hidden sm:inline">Ordine</span>
+                        <span id="cart-badge" class="bg-gold-400 text-sage-950 text-xs font-bold px-2 py-0.5 rounded-full min-w-[20px] text-center">0</span>
+                    </button>
+
+                    <!-- Menu Mobile Toggle -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl text-sage-800 hover:bg-sage-100" aria-label="Apri menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigazione Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-50 border-b border-sage-200 px-4 pt-2 pb-5 space-y-2">
+            <a href="#creazioni" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-medium text-sage-800 hover:bg-sage-100">Le Creazioni</a>
+            <a href="#cera-ecolive" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-medium text-sage-800 hover:bg-sage-100">La Cera Ecolive</a>
+            <a href="#come-ordinare" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-medium text-sage-800 hover:bg-sage-100">Come Ordinare</a>
+            <a href="#contatti" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-base font-medium text-sage-800 hover:bg-sage-100">Contatti</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-sage-100/70 via-cream-100 to-cream-50 pt-8 pb-20 sm:pt-12 lg:pt-16 lg:pb-28">
+        <!-- Elementi decorativi botanici sfumati -->
+        <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-sage-200/40 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-80 h-80 rounded-full bg-gold-400/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- Testo Hero -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage-200/60 border border-sage-300/60 text-sage-800 text-xs font-semibold uppercase tracking-widest">
+                        <span class="w-2 h-2 rounded-full bg-sage-600"></span>
+                        100% Naturale • Colate a mano in Italia
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-sage-900 leading-[1.12]">
+                        Luce gentile, profumi della natura e <span class="italic font-normal text-sage-600">cera d'oliva</span>.
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-sage-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Benvenuti nel laboratorio artigianale <strong class="font-medium text-sage-900">I colori di Martina</strong>. Ogni candela e creazione profumata nasce dalla purezza della cera ecolive, lavorata lentamente a mano per portare calore, armonia e sostenibilità nei tuoi spazi.
+                    </p>
+                    
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#creazioni" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sage-700 text-cream-50 font-medium text-sm tracking-wide hover:bg-sage-800 transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                            Scopri le creazioni
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#cera-ecolive" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/80 text-sage-800 border border-sage-300 font-medium text-sm tracking-wide hover:bg-sage-100 transition-all flex items-center justify-center gap-2">
+                            Perché la cera ecolive?
+                        </a>
+                    </div>
+
+                    <!-- Mini Garanzie -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-sage-200/80 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div>
+                            <p class="font-serif text-xl font-semibold text-sage-900">100% Oliva</p>
+                            <p class="text-xs text-sage-600">Cera vegetale pura</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-xl font-semibold text-sage-900">Zero Paraffina</p>
+                            <p class="text-xs text-sage-600">Combustione pulita</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-xl font-semibold text-sage-900">Fatto a Mano</p>
+                            <p class="text-xs text-sage-600">Pezzi unici su misura</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografia reale di una creazione artigianale -->
+                <div class="lg:col-span-5">
+                    <figure class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-[2rem] bg-white p-2.5 sm:p-3 shadow-xl border border-sage-200/80">
+                            <img
+                                src="images/composizione-floreale.jpeg"
+                                alt="Composizione floreale artigianale in cera color avorio, realizzata da I Colori di Martina"
+                                class="w-full aspect-[4/5] object-cover object-center rounded-[1.5rem]"
+                                fetchpriority="high"
+                            >
+                        </div>
+                        <figcaption class="absolute -bottom-5 left-4 right-4 sm:left-8 sm:right-8 rounded-2xl bg-white/95 backdrop-blur-md px-4 py-3 shadow-lg border border-sage-200 text-center">
+                            <p class="font-serif italic text-lg sm:text-xl text-sage-800">Ogni creazione è un piccolo pezzo unico.</p>
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-sage-600 mt-1">Realizzato a mano con cura</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Catalogo / Vetrina Creazioni -->
+    <section id="creazioni" class="py-20 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Intestazione Sezione -->
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sage-600">Collezione Artigianale</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-sage-900">Le mie creazioni in cera</h2>
+                <p class="text-sage-700 text-sm sm:text-base font-light">
+                    Scegli le tue preferite, personalizza i colori o aggiungi le creazioni alla tua lista d'ordine per richiederle direttamente a Fortuna.
+                </p>
+            </div>
+
+            <!-- Barra Strumenti Gestione (Visibile quando si attiva "Gestisci Vetrine") -->
+            <div id="manage-banner" class="hidden mb-10 p-5 sm:p-6 rounded-3xl bg-sage-100 border-2 border-dashed border-sage-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3 text-center sm:text-left">
+                    <div class="w-10 h-10 rounded-full bg-sage-700 text-white flex items-center justify-center shrink-0">
+                        <i data-lucide="edit-3" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-semibold text-sage-900">Modalità Gestione Vetrina Attiva</h3>
+                        <p class="text-xs sm:text-sm text-sage-700">Puoi aggiungere nuove creazioni, modificare nomi, prezzi o descrizioni di quelle esistenti.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-full sm:w-auto justify-center">
+                    <button onclick="openProductModal()" class="px-5 py-2.5 rounded-full bg-sage-700 text-white text-sm font-medium hover:bg-sage-800 transition-all shadow-sm flex items-center gap-2">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                        Nuova Creazione
+                    </button>
+                    <button onclick="resetDefaultProducts()" class="px-4 py-2.5 rounded-full bg-white text-sage-700 border border-sage-300 text-xs font-medium hover:bg-sage-50 transition-all">
+                        Ripristina Esempi
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filtri per Categoria -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="category-filters">
+                <button onclick="filterProducts('Tutte')" data-cat="Tutte" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-sage-700 text-cream-50 shadow-sm">
+                    Tutte le creazioni
+                </button>
+                <button onclick="filterProducts('Candele Scultura')" data-cat="Candele Scultura" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-white text-sage-700 border border-sage-200 hover:bg-sage-100">
+                    Candele Scultura
+                </button>
+                <button onclick="filterProducts('Candele in Vasetto')" data-cat="Candele in Vasetto" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-white text-sage-700 border border-sage-200 hover:bg-sage-100">
+                    Candele in Vasetto
+                </button>
+                <button onclick="filterProducts('Cera da Sciogliere')" data-cat="Cera da Sciogliere" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-white text-sage-700 border border-sage-200 hover:bg-sage-100">
+                    Cera da Sciogliere / Wax Melts
+                </button>
+            </div>
+
+            <!-- Griglia Prodotti -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Le card vengono generate dinamicamente via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Vantaggi della Cera Ecolive -->
+    <section id="cera-ecolive" class="py-20 bg-sage-100/70 border-y border-sage-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sage-600">La Materia Prima</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-sage-900 leading-tight">
+                        Perché scegliere la <span class="italic text-sage-600 font-normal">Cera Ecolive</span>?
+                    </h2>
+                    <p class="text-sage-700 leading-relaxed font-light">
+                        La cera d'oliva (Ecolive) è un tesoro botanico derivato dall'olio d'oliva mediterraneo. A differenza delle comuni candele industriali in paraffina, rispetta l'aria che respiri e l'ambiente che ci circonda.
+                    </p>
+                    <div class="p-5 rounded-2xl bg-cream-50 border border-sage-200/80 shadow-sm">
+                        <p class="font-serif italic text-lg text-sage-800">
+                            "La cera d'oliva ha una finitura naturalmente cremosa e vellutata, capace di trattenere e diffondere le essenze in modo dolce, avvolgente e mai invasivo."
+                        </p>
+                        <p class="text-xs font-semibold text-sage-600 mt-2 uppercase tracking-wider">— Fortuna</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Card Vantaggio 1 -->
+                    <div class="bg-cream-50 p-6 rounded-3xl border border-sage-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center mb-4">
+                            <i data-lucide="sprout" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">100% Vegetale & Biodegradabile</h3>
+                        <p class="text-sm text-sage-700 leading-relaxed">
+                            Ottenuta esclusivamente da fonti rinnovabili europee, priva di OGM, olio di palma e derivati del petrolio. Totalmente cruelty-free.
+                        </p>
+                    </div>
+
+                    <!-- Card Vantaggio 2 -->
+                    <div class="bg-cream-50 p-6 rounded-3xl border border-sage-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center mb-4">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">Combustione Lenta e Pulita</h3>
+                        <p class="text-sm text-sage-700 leading-relaxed">
+                            Brucia più a lungo rispetto alla paraffina tradizionale e non emette fumi neri o sostanze tossiche, mantenendo l'aria di casa pura.
+                        </p>
+                    </div>
+
+                    <!-- Card Vantaggio 3 -->
+                    <div class="bg-cream-50 p-6 rounded-3xl border border-sage-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center mb-4">
+                            <i data-lucide="palette" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">Colori & Profumi Su Misura</h3>
+                        <p class="text-sm text-sage-700 leading-relaxed">
+                            Ogni creazione è colata a mano in piccoli lotti con pigmenti naturali e fragranze certificate per un risultato unico e armonioso.
+                        </p>
+                    </div>
+
+                    <!-- Card Vantaggio 4 -->
+                    <div class="bg-cream-50 p-6 rounded-3xl border border-sage-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center mb-4">
+                            <i data-lucide="gift" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">Ideale per Regali & Bomboniere</h3>
+                        <p class="text-sm text-sage-700 leading-relaxed">
+                            Realizzo anche creazioni personalizzate nei colori e nelle profumazioni per eventi speciali, lauree, battesimi e matrimoni.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Come Ordinare -->
+    <section id="come-ordinare" class="py-20 bg-cream-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sage-600">Semplicità Artigianale</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-sage-900 mt-2 mb-12">Come ordinare le tue creazioni</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative p-6 rounded-3xl bg-white border border-sage-200/70 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-sage-700 text-cream-50 font-serif text-xl font-bold flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">Scegli dal Catalogo</h3>
+                    <p class="text-sm text-sage-700">Esplora le candele scultura, i vasetti o le ceralacche profumate e aggiungile al tuo riepilogo d'ordine.</p>
+                </div>
+
+                <div class="relative p-6 rounded-3xl bg-white border border-sage-200/70 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-sage-700 text-cream-50 font-serif text-xl font-bold flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">Personalizza e Invia</h3>
+                    <p class="text-sm text-sage-700">Apri il carrello, inserisci eventuali preferenze sui colori o profumi e copia il messaggio pronto o invia la richiesta.</p>
+                </div>
+
+                <div class="relative p-6 rounded-3xl bg-white border border-sage-200/70 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-sage-700 text-cream-50 font-serif text-xl font-bold flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-serif text-2xl font-semibold text-sage-900 mb-2">Creazione & Spedizione</h3>
+                    <p class="text-sm text-sage-700">Fortuna ti confermerà la disponibilità, colerà a mano i tuoi pezzi e li spedirà con cura in tutta Italia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Elegante & Contatti -->
+    <footer id="contatti" class="bg-sage-900 text-cream-100 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-sage-800">
+                <!-- Info Brand -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300">
+                            <i data-lucide="leaf" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif text-3xl font-semibold text-cream-50">I colori di Martina</span>
+                    </div>
+                    <p class="text-sm text-sage-300 leading-relaxed max-w-sm">
+                        Piccolo laboratorio artigianale dedicato alla creazione di candele e profumatori per ambiente in pura cera d'oliva ecolive. Ogni pezzo è realizzato a mano con amore e rispetto per la natura.
+                    </p>
+                </div>
+
+                <!-- Link Rapidi -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-serif text-xl font-semibold text-cream-50">Esplora</h4>
+                    <ul class="space-y-2 text-sm text-sage-300">
+                        <li><a href="#creazioni" class="hover:text-white transition-colors">Tutte le creazioni</a></li>
+                        <li><a href="#cera-ecolive" class="hover:text-white transition-colors">Cos'è la cera ecolive</a></li>
+                        <li><a href="#come-ordinare" class="hover:text-white transition-colors">Come ordinare</a></li>
+                        <li><button onclick="toggleCartDrawer(true)" class="hover:text-white transition-colors">Il tuo riepilogo ordine</button></li>
+                    </ul>
+                </div>
+
+                <!-- Contatti & Social -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-xl font-semibold text-cream-50">Contatta Fortuna</h4>
+                    <p class="text-sm text-sage-300">Hai una richiesta speciale, vuoi un colore particolare o info per bomboniere? Scrivimi!</p>
+                    <div class="flex flex-wrap gap-3 pt-1">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
+                            <i data-lucide="instagram" class="w-4 h-4 text-gold-400"></i>
+                            Instagram
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-sage-300"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-sage-400">
+                <p>&copy; <span id="current-year"></span> I colori di Martina — Creazioni Artigianali in Cera Ecolive. Tutti i diritti riservati.</p>
+                <p>Fatto a mano con cera 100% vegetale 🌿</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Drawer Laterale Carrello / Riepilogo Ordine -->
+    <div id="cart-backdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-sage-950/40 backdrop-blur-xs z-50 hidden transition-opacity"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-cream-50 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col border-l border-sage-200">
+        <!-- Header Carrello -->
+        <div class="p-6 border-b border-sage-200 flex items-center justify-between bg-cream-100">
+            <div class="flex items-center gap-2.5">
+                <i data-lucide="shopping-bag" class="w-5 h-5 text-sage-700"></i>
+                <h3 class="font-serif text-2xl font-semibold text-sage-900">Il tuo Ordine</h3>
+            </div>
+            <button onclick="toggleCartDrawer(false)" class="p-2 rounded-full hover:bg-sage-200/70 text-sage-700 transition-colors" aria-label="Chiudi carrello">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Lista Articoli nel Carrello -->
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Popolato dinamicamente -->
+        </div>
+
+        <!-- Footer Carrello: Totale & Invio Richiesta -->
+        <div id="cart-footer" class="p-6 border-t border-sage-200 bg-cream-100 space-y-4">
+            <div class="space-y-2">
+                <label for="order-notes" class="block text-xs font-medium text-sage-700">Note per Fortuna (es. colore preferito, profumo, confezione regalo):</label>
+                <textarea id="order-notes" rows="2" placeholder="Es. Vorrei la candela Bubble in verde salvia chiaro..." class="w-full rounded-2xl border border-sage-300 bg-white px-3.5 py-2 text-sm text-sage-900 focus:outline-none focus:ring-2 focus:ring-sage-500"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-sage-200/80">
+                <span class="text-sm font-medium text-sage-700">Totale stimato</span>
+                <span id="cart-total" class="font-serif text-3xl font-bold text-sage-900">€ 0,00</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-2.5">
+                <button onclick="copyOrderForSocial()" class="w-full py-3.5 px-4 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 font-medium text-sm transition-all shadow-sm flex items-center justify-center gap-2">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                    Copia Riepilogo per WhatsApp / Instagram
+                </button>
+                <button onclick="openCheckoutModal()" class="w-full py-3 px-4 rounded-full bg-white hover:bg-sage-100 text-sage-800 border border-sage-300 font-medium text-sm transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    Invia Richiesta Modulo Rapido
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Modale Aggiungi / Modifica Creazione (Modalità Gestione Vetrina) -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-sage-950/50 backdrop-blur-xs">
+        <div class="bg-cream-50 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-sage-200 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 id="product-modal-title" class="font-serif text-2xl sm:text-3xl font-semibold text-sage-900">Aggiungi Creazione</h3>
+                <button onclick="closeProductModal()" class="p-2 rounded-full hover:bg-sage-200/70 text-sage-700">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <form id="product-form" onsubmit="saveProductForm(event)" class="space-y-4">
+                <input type="hidden" id="prod-id">
+                
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Nome della Creazione *</label>
+                    <input type="text" id="prod-name" required placeholder="Es. Candela Peonia Salvia" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Prezzo (€) *</label>
+                        <input type="number" id="prod-price" step="0.50" min="1" required placeholder="14.50" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Categoria *</label>
+                        <select id="prod-category" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                            <option value="Candele Scultura">Candele Scultura</option>
+                            <option value="Candele in Vasetto">Candele in Vasetto</option>
+                            <option value="Cera da Sciogliere">Cera da Sciogliere</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Profumazione / Note Olfattive</label>
+                    <input type="text" id="prod-scent" placeholder="Es. Fico selvatico, foglie d'olivo e muschio bianco" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Descrizione & Dimensioni *</label>
+                    <textarea id="prod-desc" rows="3" required placeholder="Descrivi la forma, il peso in grammi e i colori disponibili..." class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Percorso foto (facoltativo)</label>
+                    <input type="text" id="prod-image" placeholder="Es. images/nome-foto.jpeg" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                    <p class="text-xs text-sage-500 mt-1">Carica prima la foto nella cartella images del sito e inserisci qui il suo percorso.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Stile Card (se non inserisci una foto)</label>
+                        <select id="prod-style" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                            <option value="bubble">Candela Bubble / Cubo</option>
+                            <option value="pillar">Candela Scultura Scanalata</option>
+                            <option value="jar">Vasetto con Tappo Legno</option>
+                            <option value="flower">Candela Fiore / Peonia</option>
+                            <option value="melts">Cialde / Cuori Wax Melts</option>
+                            <option value="arch">Candela Arco Minimal</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Tonalità Cera</label>
+                        <select id="prod-color" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                            <option value="sage">Verde Salvia Tenue</option>
+                            <option value="cream">Avorio / Bianco Panna</option>
+                            <option value="sand">Sabbia & Miele</option>
+			    <option value="pink">Rosa</option>
+                            <option value="pinky">Rosa & Bianco Panna</option>
+                            <option value="beige">Beige</option>
+			    <option value="brown">Marrone</option>
+			    <option value="bluey">Blu & Bianco Panna</option>
+			    <option value="Blue">blu</option>
+			    <option value="light blue">Azzurro</option>
+			    <option value="choose">fai la tua richiesta in descrizione</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeProductModal()" class="px-5 py-2.5 rounded-full border border-sage-300 text-sage-700 text-sm font-medium hover:bg-sage-100">Annulla</button>
+                    <button type="submit" class="px-6 py-2.5 rounded-full bg-sage-700 text-cream-50 text-sm font-medium hover:bg-sage-800 shadow-sm">Salva Creazione</button>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <div class="products">
-      <article class="product">
-        <img src="https://placehold.co/600x700/E5E9DE/455B46?text=Creazione+01"
-             alt="Candela artistica">
-        <h3>Creazione 01</h3>
-        <p>Una creazione artigianale realizzata con cura.</p>
-        <div class="price">Prezzo su richiesta</div>
-        <a href="https://wa.me/393337183658?text=Vorrei%20informazioni%20sulla%20Creazione%2001">
-          CHIEDI INFORMAZIONI →
-        </a>
-      </article>
-
-      <article class="product">
-        <img src="https://placehold.co/600x700/E5E9DE/455B46?text=Creazione+02"
-             alt="Composizione in cera">
-        <h3>Creazione 02</h3>
-        <p>Una composizione decorativa fatta a mano.</p>
-        <div class="price">Prezzo su richiesta</div>
-        <a href="https://wa.me/393337183658?text=Vorrei%20informazioni%20sulla%20Creazione%2002">
-          CHIEDI INFORMAZIONI →
-        </a>
-      </article>
+    <!-- Modale Conferma Invio Ordine -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-sage-950/50 backdrop-blur-xs">
+        <div class="bg-cream-50 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-sage-200">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-sage-900">Invia Richiesta</h3>
+                <button onclick="closeCheckoutModal()" class="p-2 rounded-full hover:bg-sage-200/70 text-sage-700">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <p class="text-sm text-sage-700 mb-5">Lascia i tuoi recapiti: Fortuna riceverà il riepilogo delle creazioni scelte e ti ricontatterà per confermare colori, tempi di realizzo e spedizione.</p>
+            
+            <form onsubmit="submitOrderRequest(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Il tuo Nome *</label>
+                    <input type="text" id="cust-name" required placeholder="Es. Giulia Rossi" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">WhatsApp o Email *</label>
+                    <input type="text" id="cust-contact" required placeholder="Es. +39 333 1234567" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 rounded-full bg-sage-700 text-cream-50 font-medium text-sm hover:bg-sage-800 shadow-md transition-all">
+                        Conferma Richiesta d'Ordine
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-  </section>
 
-  <section class="about">
-    <div class="section-title">
-      <h2>La passione diventa creazione</h2>
-    </div>
-    <p>
-      I Colori di Martina nasce dall'amore per
-      i dettagli, i colori e le creazioni artigianali.
-      Ogni prodotto è pensato per portare un tocco
-      speciale nella tua casa o nei tuoi momenti importanti.
-    </p>
-  </section>
-</main>
+    <script>
+        // Anno corrente nel footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-<footer id="contatti">
-  <h2 style="font-style:italic;font-weight:normal">I Colori di Martina</h2>
-  <p>PER INFORMAZIONI E ORDINI</p>
-  <a href="https://wa.me/393337183658">WHATSAPP</a>
-  <a href="https://www.instagram.com/i_coloridimartina/">INSTAGRAM</a>
-  <p>© I Colori di Martina</p>
-</footer>
+        // Catalogo iniziale di esempio per "I colori di Martina"
+        const defaultProducts = [
+            {
+                id: 'prod-1',
+                name: 'Candela Scultura "Nuvole d\'Olivo"',
+                price: 14.50,
+                category: 'Candele Scultura',
+                scent: 'Foglie d\'olivo, tè verde e legno di cedro',
+                description: 'Iconica candela bubble colata a mano in pura cera ecolive. Ideale come elemento d\'arredo o per un momento di relax. Peso: 160g.',
+                style: 'bubble',
+                color: 'sage'
+            },
+            {
+                id: 'prod-2',
+                name: 'Vasetto "Quiete Mediterranea"',
+                price: 18.00,
+                image: "images/composizione-floreale.jpeg",
+                category: 'Candele in Vasetto',
+                scent: 'Fico selvatico, bergamotto e vaniglia naturale',
+                description: 'Candela in bicchiere di vetro riutilizzabile con tappo in legno naturale e stoppino in puro cotone. Durata circa 35 ore.',
+                style: 'jar',
+                color: 'cream'
+            },
+            {
+                id: 'prod-3',
+                name: 'Colonna Scanalata "Armonia"',
+                price: 16.00,
+                category: 'Candele Scultura',
+                scent: 'Lavanda provenzale e camomilla',
+                description: 'Elegante candela cilindrica con lavorazione plissettata. La cera d\'oliva dona una texture vellutata e una fiamma calda. Altezza 14 cm.',
+                style: 'pillar',
+                color: 'olive'
+            },
+            {
+                id: 'prod-4',
+                name: 'Scrigno Wax Melts "Giardino Segreto"',
+                price: 9.50,
+                category: 'Cera da Sciogliere',
+                scent: 'Fiori d\'arancio, gelsomino e muschio bianco',
+                description: 'Confezione da 8 cialde profumate a forma di cuore e foglia da sciogliere nel bruciaessenze. Profumazione intensa e duratura.',
+                style: 'melts',
+                color: 'sage'
+            },
+            {
+                id: 'prod-5',
+                image: 'images/scultura-volto-floreale.jpeg',
+                name: 'Candela Fiore "Peonia d\'Alba"',
+                price: 12.50,
+                category: 'Candele Scultura',
+                scent: 'Rosa damascena e peonia bianca',
+                description: 'Delicata scultura floreale ricca di petali scolpiti nella cera. Perfetta anche come idea regalo o segnaposto per cerimonie.',
+                style: 'flower',
+                color: 'sand'
+            },
+            {
+                id: 'prod-6',
+                name: 'Candela Arco "Brezzamarina"',
+                price: 17.50,
+                category: 'Candele Scultura',
+                scent: 'Sale marino, salvia sclarea e eucalipto',
+                description: 'Design contemporaneo a doppio arco in tonalità verde salvia tenue. Realizzata artigianalmente pezzo per pezzo.',
+                style: 'arch',
+                color: 'sage'
+            }
+        ];
 
+        // Stato dell'applicazione
+        const savedProducts = JSON.parse(localStorage.getItem('martina_products') || 'null');
+        let products = Array.isArray(savedProducts)
+            ? savedProducts.map(saved => {
+                const original = defaultProducts.find(item => item.id === saved.id);
+                return { ...(original || {}), ...saved, image: saved.image || (original && original.image) || '' };
+              })
+            : [...defaultProducts];
+        let cart = JSON.parse(localStorage.getItem('martina_cart')) || [];
+        let currentCategory = 'Tutte';
+        let isManageMode = false;
+
+        // Palette colori per le illustrazioni SVG delle card
+        const colorPalettes = {
+            sage: { bg: '#EBF0E8', main: '#9BB390', light: '#B5C8AC', dark: '#6E8B62' },
+            olive: { bg: '#E7ECE2', main: '#829972', light: '#A2B694', dark: '#5A6E4D' },
+            cream: { bg: '#F4EFE6', main: '#EAE0D0', light: '#F7F3EB', dark: '#C7B8A1' },
+            sand: { bg: '#F3ECE1', main: '#DFC9AA', light: '#EDE0CC', dark: '#B89E7B' }
+        };
+
+        // Genera un'illustrazione SVG artigianale unica per ogni stile di candela
+        function getProductIllustrationSVG(style, colorKey) {
+            const p = colorPalettes[colorKey] || colorPalettes.sage;
+            
+            if (style === 'bubble') {
+                return `
+                <svg viewBox="0 0 240 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="240" height="200" fill="${p.bg}"/>
+                    <circle cx="120" cy="105" r="72" fill="#FFFFFF" opacity="0.5"/>
+                    <g transform="translate(82, 48)">
+                        <circle cx="20" cy="20" r="19" fill="${p.light}"/>
+                        <circle cx="56" cy="20" r="19" fill="${p.main}"/>
+                        <circle cx="20" cy="54" r="19" fill="${p.main}"/>
+                        <circle cx="56" cy="54" r="19" fill="${p.dark}"/>
+                        <circle cx="20" cy="88" r="19" fill="${p.light}"/>
+                        <circle cx="56" cy="88" r="19" fill="${p.main}"/>
+                        <path d="M38 2 V-10" stroke="#465B3E" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M38 -24 C42 -17 42 -12 38 -11 C34 -12 34 -17 38 -24 Z" fill="#E5A93B"/>
+                    </g>
+                    <ellipse cx="120" cy="162" rx="52" ry="7" fill="${p.dark}" opacity="0.2"/>
+                </svg>`;
+            }
+            if (style === 'jar') {
+                return `
+                <svg viewBox="0 0 240 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="240" height="200" fill="${p.bg}"/>
+                    <circle cx="120" cy="105" r="72" fill="#FFFFFF" opacity="0.5"/>
+                    <g transform="translate(78, 46)">
+                        <!-- Tappo in legno dietro -->
+                        <rect x="12" y="0" width="60" height="14" rx="5" fill="#C8A97E"/>
+                        <!-- Vasetto vetro -->
+                        <rect x="4" y="14" width="76" height="94" rx="14" fill="#FFFFFF" fill-opacity="0.85" stroke="${p.dark}" stroke-width="1.5"/>
+                        <!-- Cera interna -->
+                        <rect x="8" y="24" width="68" height="80" rx="10" fill="${p.light}"/>
+                        <!-- Etichetta -->
+                        <rect x="16" y="42" width="52" height="42" rx="6" fill="#FDFCFB" stroke="${p.main}" stroke-width="1"/>
+                        <line x1="24" y1="56" x2="60" y2="56" stroke="#465B3E" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="28" y1="65" x2="56" y2="65" stroke="#91AC85" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="42" cy="74" r="2.5" fill="#B39162"/>
+                    </g>
+                    <ellipse cx="120" cy="162" rx="54" ry="7" fill="${p.dark}" opacity="0.2"/>
+                </svg>`;
+            }
+            if (style === 'pillar') {
+                return `
+                <svg viewBox="0 0 240 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="240" height="200" fill="${p.bg}"/>
+                    <circle cx="120" cy="105" r="72" fill="#FFFFFF" opacity="0.5"/>
+                    <g transform="translate(88, 36)">
+                        <rect x="0" y="12" width="64" height="110" rx="12" fill="${p.main}"/>
+                        <rect x="8" y="12" width="10" height="110" rx="5" fill="${p.light}"/>
+                        <rect x="27" y="12" width="10" height="110" rx="5" fill="${p.light}"/>
+                        <rect x="46" y="12" width="10" height="110" rx="5" fill="${p.light}"/>
+                        <path d="M32 12 V0" stroke="#465B3E" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M32 -14 C36 -7 36 -2 32 -1 C28 -2 28 -7 32 -14 Z" fill="#E5A93B"/>
+                    </g>
+                    <ellipse cx="120" cy="162" rx="48" ry="7" fill="${p.dark}" opacity="0.2"/>
+                </svg>`;
+            }
+            if (style === 'flower') {
+                return `
+                <svg viewBox="0 0 240 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="240" height="200" fill="${p.bg}"/>
+                    <circle cx="120" cy="105" r="72" fill="#FFFFFF" opacity="0.5"/>
+                    <g transform="translate(120, 108)">
+                        <ellipse cx="0" cy="0" rx="46" ry="26" fill="${p.dark}" opacity="0.6"/>
+                        <ellipse cx="-20" cy="-6" rx="24" ry="18" transform="rotate(-20 -20 -6)" fill="${p.main}"/>
+                        <ellipse cx="20" cy="-6" rx="24" ry="18" transform="rotate(20 20 -6)" fill="${p.main}"/>
+                        <ellipse cx="0" cy="-12" rx="26" ry="18" fill="${p.light}"/>
+                        <ellipse cx="0" cy="-4" rx="16" ry="12" fill="#FDFCFB" opacity="0.7"/>
+                        <path d="M0 -14 V-26" stroke="#465B3E" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                    <ellipse cx="120" cy="156" rx="50" ry="7" fill="${p.dark}" opacity="0.2"/>
+                </svg>`;
+            }
+            if (style === 'melts') {
+                return `
+                <svg viewBox="0 0 240 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="240" height="200" fill="${p.bg}"/>
+                    <circle cx="120" cy="105" r="72" fill="#FFFFFF" opacity="0.5"/>
+                    <!-- Cialde profumate -->
+                    <g transform="translate(65, 65)">
+                        <path d="M25 42 C25 42 5 28 5 15 C5 8 10 3 17 3 C21 3 24 5 25 8 C26 5 29 3 33 3 C40 3 45 8 45 15 C45 28 25 42 25 42 Z" fill="${p.main}"/>
+                        <path d="M75 34 C75 34 55 20 55 7 C55 0 60 -5 67 -5 C71 -5 74 -3 75 0 C76 -3 79 -5 83 -5 C90 -5 95 0 95 7 C95 20 75 34 75 34 Z" fill="${p.light}" stroke="${p.dark}" stroke-width="1"/>
+                        <circle cx="52" cy="58" r="22" fill="${p.dark}" opacity="0.85"/>
+                        <path d="M44 58 Q52 48 60 58 Q52 68 44 58 Z" fill="#FDFCFB" opacity="0.6"/>
+                    </g>
+                    <ellipse cx="120" cy="158" rx="55" ry="7" fill="${p.dark}" opacity="0.2"/>
+                </svg>`;
+            }
+            // Default: 'arch'
+            return `
+            <svg viewBox="0 0 240 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <rect width="240" height="200" fill="${p.bg}"/>
+                <circle cx="120" cy="105" r="72" fill="#FFFFFF" opacity="0.5"/>
+                <g transform="translate(76, 48)">
+                    <path d="M0 105 V44 C0 19.6995 19.6995 0 44 0 C68.3005 0 88 19.6995 88 44 V105 H64 V44 C64 32.9543 55.0457 24 44 24 C32.9543 24 24 32.9543 24 44 V105 H0 Z" fill="${p.main}"/>
+                    <path d="M44 0 V-12" stroke="#465B3E" stroke-width="2" stroke-linecap="round"/>
+                </g>
+                <ellipse cx="120" cy="160" rx="54" ry="7" fill="${p.dark}" opacity="0.2"/>
+            </svg>`;
+        }
+
+        // Formatta valuta in Euro
+        function formatPrice(price) {
+            return '€ ' + Number(price).toFixed(2).replace('.', ',');
+        }
+
+        // Mostra notifiche toast eleganti
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const bgClass = type === 'success' ? 'bg-sage-800 text-cream-50 border-sage-700' : 'bg-gold-600 text-white border-gold-500';
+            
+            toast.className = `${bgClass} border px-4 py-3 rounded-2xl shadow-lg flex items-center gap-2.5 text-sm font-medium transform transition-all duration-300 translate-y-2 opacity-0 pointer-events-auto`;
+            toast.innerHTML = `
+                <i data-lucide="${type === 'success' ? 'check-circle-2' : 'sparkles'}" class="w-4 h-4 shrink-0 text-gold-400"></i>
+                <span>${message}</span>
+            `;
+            container.appendChild(toast);
+            lucide.createIcons();
+
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            });
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // Renderizza il catalogo prodotti
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const filtered = currentCategory === 'Tutte' 
+                ? products 
+                : products.filter(p => p.category === currentCategory);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-16 bg-white rounded-3xl border border-sage-200">
+                        <p class="font-serif text-2xl text-sage-800">Nessuna creazione trovata in questa categoria.</p>
+                        <button onclick="filterProducts('Tutte')" class="mt-4 px-5 py-2 rounded-full bg-sage-100 text-sage-800 text-sm font-medium hover:bg-sage-200">Mostra tutte</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(product => `
+                <article class="group bg-white rounded-[2rem] border border-sage-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Immagine / Illustrazione Artigianale -->
+                        <div class="relative aspect-[4/3] overflow-hidden bg-sage-100">
+                            <div class="w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                ${product.image
+                                    ? `<img src="${product.image}" alt="${product.name}" loading="lazy" class="w-full h-full object-cover">`
+                                    : getProductIllustrationSVG(product.style, product.color)}
+                            </div>
+                            <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[11px] font-semibold text-sage-800 shadow-xs">
+                                ${product.category}
+                            </span>
+
+                            <!-- Controlli Modifica/Elimina se in Modalità Gestione -->
+                            ${isManageMode ? `
+                                <div class="absolute top-3.5 right-3.5 flex gap-1.5">
+                                    <button onclick="openProductModal('${product.id}')" title="Modifica creazione e prezzo" class="p-2 rounded-full bg-white text-sage-800 hover:bg-sage-700 hover:text-white shadow-md transition-colors">
+                                        <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+                                    </button>
+                                    <button onclick="deleteProduct('${product.id}')" title="Elimina creazione" class="p-2 rounded-full bg-white text-red-600 hover:bg-red-600 hover:text-white shadow-md transition-colors">
+                                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                                    </button>
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <!-- Dettagli Creazione -->
+                        <div class="p-6 pb-4">
+                            <div class="flex justify-between items-start gap-3 mb-2">
+                                <h3 class="font-serif text-2xl font-semibold text-sage-900 leading-snug">${product.name}</h3>
+                                <span class="font-serif text-2xl font-bold text-sage-700 shrink-0">${formatPrice(product.price)}</span>
+                            </div>
+
+                            ${product.scent ? `
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gold-600 mb-3">
+                                    <i data-lucide="wind" class="w-3.5 h-3.5 shrink-0"></i>
+                                    <span>${product.scent}</span>
+                                </div>
+                            ` : ''}
+
+                            <p class="text-sm text-sage-700 leading-relaxed font-light">
+                                ${product.description}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Azione Card -->
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="addToCart('${product.id}')" class="w-full py-3 px-4 rounded-full bg-sage-100 hover:bg-sage-700 text-sage-900 hover:text-cream-50 font-medium text-sm transition-all flex items-center justify-center gap-2 group/btn">
+                            <i data-lucide="plus-circle" class="w-4 h-4 text-sage-700 group-hover/btn:text-cream-50 transition-colors"></i>
+                            Aggiungi all'ordine
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        // Filtro Categorie
+        function filterProducts(category) {
+            currentCategory = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.cat === category) {
+                    btn.className = 'filter-btn active px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-sage-700 text-cream-50 shadow-sm';
+                } else {
+                    btn.className = 'filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-white text-sage-700 border border-sage-200 hover:bg-sage-100';
+                }
+            });
+            renderProducts();
+        }
+
+        // Gestione Carrello
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id: product.id, name: product.name, price: product.price, qty: 1 });
+            }
+
+            saveCart();
+            updateCartUI();
+            showToast(`"${product.name}" aggiunto al tuo ordine`);
+        }
+
+        function updateCartQty(productId, delta) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index === -1) return;
+
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            saveCart();
+            updateCartUI();
+        }
+
+        function saveCart() {
+            localStorage.setItem('martina_cart', JSON.stringify(cart));
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cart-badge');
+            const container = document.getElementById('cart-items-container');
+            const totalEl = document.getElementById('cart-total');
+            const footer = document.getElementById('cart-footer');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            badge.textContent = totalItems;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center text-center py-12 space-y-3">
+                        <div class="w-16 h-16 rounded-full bg-sage-100 text-sage-400 flex items-center justify-center">
+                            <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+                        </div>
+                        <p class="font-serif text-2xl text-sage-800">La tua lista è vuota</p>
+                        <p class="text-sm text-sage-600 max-w-xs">Aggiungi le creazioni in cera ecolive che desideri per preparare la tua richiesta per Fortuna.</p>
+                    </div>
+                `;
+                footer.classList.add('hidden');
+            } else {
+                footer.classList.remove('hidden');
+                let total = 0;
+
+                container.innerHTML = cart.map(item => {
+                    const subtotal = item.price * item.qty;
+                    total += subtotal;
+                    return `
+                        <div class="p-4 rounded-2xl bg-white border border-sage-200/80 flex items-center justify-between gap-3">
+                            <div class="min-w-0 flex-1">
+                                <h4 class="font-serif text-lg font-semibold text-sage-900 truncate">${item.name}</h4>
+                                <p class="text-xs text-sage-600">${formatPrice(item.price)} cad.</p>
+                            </div>
+                            <div class="flex items-center gap-2 bg-sage-50 rounded-full p-1 border border-sage-200">
+                                <button onclick="updateCartQty('${item.id}', -1)" class="w-7 h-7 rounded-full bg-white text-sage-800 hover:bg-sage-200 flex items-center justify-center text-sm font-bold shadow-2xs">-</button>
+                                <span class="text-xs font-semibold w-5 text-center">${item.qty}</span>
+                                <button onclick="updateCartQty('${item.id}', 1)" class="w-7 h-7 rounded-full bg-white text-sage-800 hover:bg-sage-200 flex items-center justify-center text-sm font-bold shadow-2xs">+</button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                totalEl.textContent = formatPrice(total);
+            }
+            lucide.createIcons();
+        }
+
+        function toggleCartDrawer(open) {
+            const drawer = document.getElementById('cart-drawer');
+            const backdrop = document.getElementById('cart-backdrop');
+            if (open) {
+                backdrop.classList.remove('hidden');
+                requestAnimationFrame(() => drawer.classList.remove('translate-x-full'));
+            } else {
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            }
+        }
+
+        // Copia riepilogo ordine negli appunti per WhatsApp / Instagram
+        function copyOrderForSocial() {
+            if (cart.length === 0) return;
+            const notes = document.getElementById('order-notes').value.trim();
+            let total = 0;
+            let text = "🌿 Ciao Fortuna! Vorrei richiedere queste creazioni da 'I colori di Martina':\n\n";
+            
+            cart.forEach(item => {
+                const sub = item.price * item.qty;
+                total += sub;
+text += `• ${item.qty}x ${item.name} (${formatPrice(sub)})\n`;
+            });
+            
+            text += `\nTotale stimato: ${formatPrice(total)}`;
+            if (notes) {
+                text += `\nNote/Preferenze: ${notes}`;
+            }
+
+            // Uso di execCommand('copy') per compatibilità iframe
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = text;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Riepilogo copiato! Incollalo su WhatsApp o Instagram.');
+            } catch (err) {
+                showToast('Impossibile copiare automaticamente.', 'info');
+            }
+            document.body.removeChild(tempTextarea);
+        }
+
+        // Modale Checkout Rapido
+        function openCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function submitOrderRequest(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            cart = [];
+            saveCart();
+            updateCartUI();
+            closeCheckoutModal();
+            toggleCartDrawer(false);
+            showToast(`Grazie ${name}! Richiesta inviata a Fortuna.`);
+        }
+
+        // Modalità Gestione Vetrina (Aggiunta / Modifica Creazioni e Prezzi)
+        function toggleManageMode() {
+            isManageMode = !isManageMode;
+            const banner = document.getElementById('manage-banner');
+            const btn = document.getElementById('toggle-manage-btn');
+            const btnText = document.getElementById('manage-btn-text');
+
+            if (isManageMode) {
+                banner.classList.remove('hidden');
+                btn.classList.add('bg-sage-200', 'border-sage-500');
+                btnText.textContent = 'Chiudi Gestione';
+                showToast('Modalità modifica vetrina attivata', 'info');
+            } else {
+                banner.classList.add('hidden');
+                btn.classList.remove('bg-sage-200', 'border-sage-500');
+                btnText.textContent = 'Gestisci Vetrine';
+            }
+            renderProducts();
+        }
+
+        function openProductModal(productId = null) {
+            const modal = document.getElementById('product-modal');
+            const title = document.getElementById('product-modal-title');
+            const form = document.getElementById('product-form');
+
+            if (productId) {
+                const p = products.find(item => item.id === productId);
+                if (!p) return;
+                title.textContent = 'Modifica Creazione';
+                document.getElementById('prod-id').value = p.id;
+                document.getElementById('prod-name').value = p.name;
+                document.getElementById('prod-price').value = p.price;
+                document.getElementById('prod-image').value = p.image;
+                document.getElementById('prod-category').value = p.category;
+                document.getElementById('prod-scent').value = p.scent || '';
+                document.getElementById('prod-desc').value = p.description;
+                document.getElementById('prod-style').value = p.style || 'bubble';
+                document.getElementById('prod-color').value = p.color || 'sage';
+            } else {
+                title.textContent = 'Nuova Creazione in Cera';
+                form.reset();
+                document.getElementById('prod-id').value = '';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function saveProductForm(e) {
+            e.preventDefault();
+            const id = document.getElementById('prod-id').value;
+            const newProductData = {
+                id: id || 'prod-' + Date.now(),
+                name: document.getElementById('prod-name').value.trim(),
+                price: parseFloat(document.getElementById('prod-price').value),
+                category: document.getElementById('prod-category').value,
+                scent: document.getElementById('prod-scent').value.trim(),
+                description: document.getElementById('prod-desc').value.trim(),
+                image: document.getElementById('prod-image').value.trim(),
+                style: document.getElementById('prod-style').value,
+                color: document.getElementById('prod-color').value
+            };
+
+            if (id) {
+                const idx = products.findIndex(p => p.id === id);
+                if (idx !== -1) products[idx] = newProductData;
+                showToast('Creazione aggiornata!');
+            } else {
+                products.unshift(newProductData);
+                showToast('Nuova creazione aggiunta in vetrina!');
+            }
+
+            localStorage.setItem('martina_products', JSON.stringify(products));
+            closeProductModal();
+            renderProducts();
+        }
+
+        function deleteProduct(productId) {
+            products = products.filter(p => p.id !== productId);
+            localStorage.setItem('martina_products', JSON.stringify(products));
+            renderProducts();
+            showToast('Creazione rimossa dalla vetrina', 'info');
+        }
+
+        function resetDefaultProducts() {
+            products = [...defaultProducts];
+            localStorage.setItem('martina_products', JSON.stringify(products));
+            renderProducts();
+            showToast('Catalogo originale ripristinato');
+        }
+
+        // Menu Mobile
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Inizializzazione al caricamento
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateCartUI();
+            lucide.createIcons();
+        });
+    </script>
 </body>
 </html>
+ 
