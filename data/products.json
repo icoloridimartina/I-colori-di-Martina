@@ -1,0 +1,68 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Candela Scultura \"Nuvole d'Olivo\"",
+    "price": 14.5,
+    "category": "Candele Scultura",
+    "scent": "Foglie d'olivo, tè verde e legno di cedro",
+    "description": "Iconica candela bubble colata a mano in pura cera ecolive. Ideale come elemento d'arredo o per un momento di relax. Peso: 160g.",
+    "style": "bubble",
+    "color": "sage",
+    "image": ""
+  },
+  {
+    "id": "prod-2",
+    "name": "Vasetto \"Quiete Mediterranea\"",
+    "price": 18,
+    "image": "/I-colori-di-Martina/images/composizione-floreale.jpeg",
+    "category": "Candele in Vasetto",
+    "scent": "Fico selvatico, bergamotto e vaniglia naturale",
+    "description": "Candela in bicchiere di vetro riutilizzabile con tappo in legno naturale e stoppino in puro cotone. Durata circa 35 ore.",
+    "style": "jar",
+    "color": "cream"
+  },
+  {
+    "id": "prod-3",
+    "name": "Colonna Scanalata \"Armonia\"",
+    "price": 16,
+    "category": "Candele Scultura",
+    "scent": "Lavanda provenzale e camomilla",
+    "description": "Elegante candela cilindrica con lavorazione plissettata. La cera d'oliva dona una texture vellutata e una fiamma calda. Altezza 14 cm.",
+    "style": "pillar",
+    "color": "olive",
+    "image": ""
+  },
+  {
+    "id": "prod-4",
+    "name": "Scrigno Wax Melts \"Giardino Segreto\"",
+    "price": 9.5,
+    "category": "Cera da Sciogliere",
+    "scent": "Fiori d'arancio, gelsomino e muschio bianco",
+    "description": "Confezione da 8 cialde profumate a forma di cuore e foglia da sciogliere nel bruciaessenze. Profumazione intensa e duratura.",
+    "style": "melts",
+    "color": "sage",
+    "image": ""
+  },
+  {
+    "id": "prod-5",
+    "name": "Candela Fiore \"Peonia d'Alba\"",
+    "price": 12.5,
+    "image": "/I-colori-di-Martina/images/scultura-volto-floreale.jpeg",
+    "category": "Candele Scultura",
+    "scent": "Rosa damascena e peonia bianca",
+    "description": "Delicata scultura floreale ricca di petali scolpiti nella cera. Perfetta anche come idea regalo o segnaposto per cerimonie.",
+    "style": "flower",
+    "color": "sand"
+  },
+  {
+    "id": "prod-6",
+    "name": "Candela Arco \"Brezzamarina\"",
+    "price": 17.5,
+    "category": "Candele Scultura",
+    "scent": "Sale marino, salvia sclarea e eucalipto",
+    "description": "Design contemporaneo a doppio arco in tonalità verde salvia tenue. Realizzata artigianalmente pezzo per pezzo.",
+    "style": "arch",
+    "color": "sage",
+    "image": ""
+  }
+]
