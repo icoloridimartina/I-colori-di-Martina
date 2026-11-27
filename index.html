@@ -640,6 +640,8 @@
         let isManageMode = false;
         const WHATSAPP_NUMBER = '393337183658'; // Numero di Fortuna, formato internazionale senza +
         let selectedProductImageData = '';
+        let activeGalleryProductId = null;
+        let activeGalleryIndex = 0;
 
 
         // Palette colori per le illustrazioni SVG delle card
@@ -782,6 +784,97 @@
             }, 3000);
         }
 
+        // Restituisce la foto principale e le eventuali foto aggiuntive, senza duplicati.
+        function getProductImages(product) {
+            return [product.image, ...(Array.isArray(product.gallery) ? product.gallery : [])]
+                .filter((src, index, images) => typeof src === 'string' && src && images.indexOf(src) === index);
+        }
+
+        // Apre la galleria fotografica del prodotto.
+        function openProductGallery(productId, startIndex = 0) {
+            const product = products.find(item => item.id === productId);
+            if (!product) return;
+            const images = getProductImages(product);
+            if (images.length < 2) return;
+
+            activeGalleryProductId = productId;
+            activeGalleryIndex = Math.max(0, Math.min(startIndex, images.length - 1));
+
+            let modal = document.getElementById('product-gallery-modal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'product-gallery-modal';
+                modal.className = 'fixed inset-0 z-[100] hidden items-center justify-center bg-sage-900/95 p-3 sm:p-6';
+                modal.innerHTML = '<div class="absolute inset-0" onclick="closeProductGallery()"></div>' +
+                    '<div class="relative z-10 flex w-full max-w-4xl flex-col items-center" role="dialog" aria-modal="true" aria-label="Galleria fotografica prodotto">' +
+                    '<div class="mb-3 flex w-full items-center justify-between gap-4 text-cream-50">' +
+                    '<div class="min-w-0"><p id="product-gallery-name" class="truncate font-serif text-xl sm:text-2xl"></p>' +
+                    '<p id="product-gallery-counter" class="text-xs text-cream-200/80"></p></div>' +
+                    '<button type="button" onclick="closeProductGallery()" aria-label="Chiudi galleria" class="shrink-0 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"><i data-lucide="x" class="h-5 w-5"></i></button></div>' +
+                    '<div class="relative flex w-full items-center justify-center">' +
+                    '<button id="product-gallery-prev" type="button" onclick="changeProductGallery(-1)" aria-label="Foto precedente" class="absolute left-1 z-20 rounded-full bg-white/90 p-3 text-sage-900 shadow-lg hover:bg-white sm:left-3"><i data-lucide="chevron-left" class="h-6 w-6"></i></button>' +
+                    '<img id="product-gallery-image" src="" alt="" class="max-h-[70vh] w-full rounded-2xl object-contain">' +
+                    '<button id="product-gallery-next" type="button" onclick="changeProductGallery(1)" aria-label="Foto successiva" class="absolute right-1 z-20 rounded-full bg-white/90 p-3 text-sage-900 shadow-lg hover:bg-white sm:right-3"><i data-lucide="chevron-right" class="h-6 w-6"></i></button></div>' +
+                    '<div id="product-gallery-thumbnails" class="mt-4 flex max-w-full gap-2 overflow-x-auto pb-2"></div></div>';
+                document.body.appendChild(modal);
+            }
+
+            renderProductGallery();
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            lucide.createIcons();
+        }
+
+        function renderProductGallery() {
+            const product = products.find(item => item.id === activeGalleryProductId);
+            if (!product) return;
+            const images = getProductImages(product);
+            const modal = document.getElementById('product-gallery-modal');
+            if (!modal || !images.length) return;
+
+            activeGalleryIndex = (activeGalleryIndex + images.length) % images.length;
+            const image = document.getElementById('product-gallery-image');
+            image.src = images[activeGalleryIndex];
+            image.alt = product.name + ' - foto ' + (activeGalleryIndex + 1);
+            document.getElementById('product-gallery-name').textContent = product.name;
+            document.getElementById('product-gallery-counter').textContent = 'Foto ' + (activeGalleryIndex + 1) + ' di ' + images.length;
+            document.getElementById('product-gallery-prev').classList.toggle('hidden', images.length < 2);
+            document.getElementById('product-gallery-next').classList.toggle('hidden', images.length < 2);
+            document.getElementById('product-gallery-thumbnails').innerHTML = images.map((src, index) =>
+                '<button type="button" onclick="showProductGalleryImage(' + index + ')" aria-label="Mostra foto ' + (index + 1) + '" class="shrink-0 overflow-hidden rounded-lg border-2 ' +
+                (index === activeGalleryIndex ? 'border-cream-50' : 'border-transparent opacity-60') + '">' +
+                '<img src="' + src + '" alt="" class="h-14 w-14 object-cover sm:h-16 sm:w-16"></button>'
+            ).join('');
+        }
+
+        function showProductGalleryImage(index) {
+            activeGalleryIndex = index;
+            renderProductGallery();
+        }
+
+        function changeProductGallery(direction) {
+            activeGalleryIndex += direction;
+            renderProductGallery();
+        }
+
+        function closeProductGallery() {
+            const modal = document.getElementById('product-gallery-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+            activeGalleryProductId = null;
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        document.addEventListener('keydown', event => {
+            if (!activeGalleryProductId) return;
+            if (event.key === 'Escape') closeProductGallery();
+            if (event.key === 'ArrowLeft') changeProductGallery(-1);
+            if (event.key === 'ArrowRight') changeProductGallery(1);
+        });
+
         // Renderizza il catalogo prodotti
         function renderProducts() {
             const grid = document.getElementById('products-grid');
@@ -804,11 +897,13 @@
                     <div>
                         <!-- Immagine / Illustrazione Artigianale -->
                         <div class="relative aspect-[4/3] overflow-hidden bg-sage-100">
-                            <div class="w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 ${getProductImages(product).length > 1 ? 'cursor-zoom-in' : ''}"
+                                ${getProductImages(product).length > 1 ? `onclick="openProductGallery('${product.id}', 0)" role="button" tabindex="0" aria-label="Apri le foto di ${product.name}" onkeydown="if(event.key === 'Enter' || event.key === ' '){event.preventDefault();openProductGallery('${product.id}', 0)}"` : ''}>
                                 ${product.image
                                     ? `<img src="${product.image}" alt="${product.name}" loading="lazy" class="w-full h-full object-cover">`
                                     : getProductIllustrationSVG(product.style, product.color)}
                             </div>
+                            ${getProductImages(product).length > 1 ? `<button type="button" onclick="openProductGallery('${product.id}', 0)" class="absolute bottom-3 right-3 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-sage-800 shadow-md hover:bg-white">Vedi ${getProductImages(product).length} foto</button>` : ''}
                             <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[11px] font-semibold text-sage-800 shadow-xs">
                                 ${product.category}
                             </span>
