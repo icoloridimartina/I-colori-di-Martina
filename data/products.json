@@ -26,10 +26,11 @@
     "name": "Peonia",
     "price": 15,
     "category": "Candele Scultura",
-    "scent": "Lavanda provenzale e camomilla",
-    "description": "Elegante candela cilindrica con lavorazione plissettata. La cera d'oliva dona una texture vellutata e una fiamma calda. Altezza 14 cm.",
-    "style": "pillar",
-    "color": "olive"
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-26-at-153853-2.jpeg",
+    "scent": "Cotton",
+    "description": "Elegante peonia sfumata, adatta  a qualisasi evento e personalizzabile in qualsiasi colore!\nInsieme decideremo come renderla perfetta per te ",
+    "style": "flower",
+    "color": "sand"
   },
   {
     "id": "prod-4",
