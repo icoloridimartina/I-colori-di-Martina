@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I colori di Martina | Creazioni Artigianali in Cera Ecolive</title>
@@ -14,7 +14,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <script>
-
         tailwind.config = {
             theme: {
                 extend: {
@@ -51,16 +50,9 @@
             }
         }
     </script>
-    <style>
-        html { scroll-padding-top: 5.5rem; }
-        img { display: block; }
-        @media (max-width: 640px) {
-            #creazioni { padding-top: 4rem; }
-            #creazioni .group article { border-radius: 1.35rem; }
-        }
-    </style>
 </head>
 <body class="bg-cream-50 text-sage-900 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
+
     <!-- Toast Notification Container (Sostituisce alert()) -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
@@ -126,13 +118,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-sage-100/70 via-cream-100 to-cream-50 pt-8 pb-20 sm:pt-12 lg:pt-16 lg:pb-28">
+    <section class="relative overflow-hidden bg-gradient-to-b from-sage-100/70 via-cream-100 to-cream-50 pt-12 pb-20 lg:pt-20 lg:pb-28">
         <!-- Elementi decorativi botanici sfumati -->
         <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-sage-200/40 blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-80 h-80 rounded-full bg-gold-400/10 blur-3xl pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <!-- Testo Hero -->
                 <div class="lg:col-span-7 text-center lg:text-left space-y-6">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage-200/60 border border-sage-300/60 text-sage-800 text-xs font-semibold uppercase tracking-widest">
@@ -175,22 +167,76 @@
                     </div>
                 </div>
 
-                <!-- Fotografia reale di una creazione artigianale -->
+                <!-- Illustrazione / Composizione Visiva Artigianale -->
                 <div class="lg:col-span-5">
-                    <figure class="relative mx-auto max-w-md lg:max-w-none">
-                        <div class="rounded-[2rem] bg-white p-2.5 sm:p-3 shadow-xl border border-sage-200/80">
-                            <img
-                                src="composizione-floreale.jpeg"
-                                alt="Composizione floreale artigianale in cera color avorio, realizzata da I Colori di Martina"
-                                class="w-full aspect-[4/5] object-cover object-center rounded-[1.5rem]"
-                                fetchpriority="high"
-                            >
+                    <div class="relative mx-auto max-w-md">
+                        <div class="rounded-[2.5rem] bg-sage-200/50 p-4 sm:p-6 border border-sage-300/60 shadow-xl backdrop-blur-sm">
+                            <div class="rounded-[2rem] overflow-hidden bg-cream-100 aspect-[4/5] relative flex flex-col items-center justify-center p-8 border border-cream-300">
+                                <!-- Composizione SVG artistica di candele scultura e vasetti in cera d'oliva -->
+                                <svg viewBox="0 0 320 380" class="w-full h-full drop-shadow-md" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Sfondo arco -->
+                                    <path d="M40 340 V150 C40 83.7258 93.7258 30 160 30 C226.274 30 280 83.7258 280 150 V340 H40 Z" fill="#EBF0E8"/>
+                                    <!-- Rametto d'olivo decorativo -->
+                                    <path d="M75 260 Q95 170 145 105" stroke="#729065" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                    <ellipse cx="95" cy="195" rx="14" ry="6" transform="rotate(-35 95 195)" fill="#91AC85"/>
+                                    <ellipse cx="115" cy="215" rx="14" ry="6" transform="rotate(25 115 215)" fill="#729065"/>
+                                    <ellipse cx="112" cy="155" rx="14" ry="6" transform="rotate(-40 112 155)" fill="#91AC85"/>
+                                    <ellipse cx="134" cy="170" rx="14" ry="6" transform="rotate(20 134 170)" fill="#B5C8AC"/>
+                                    <ellipse cx="132" cy="122" rx="13" ry="5.5" transform="rotate(-30 132 122)" fill="#729065"/>
+                                    <circle cx="106" cy="182" r="4.5" fill="#465B3E"/>
+                                    <circle cx="126" cy="142" r="4" fill="#465B3E"/>
+
+                                    <!-- Candela Scultura Bubble (Verde Salvia) -->
+                                    <g transform="translate(105, 175)">
+                                        <rect x="0" y="0" width="84" height="145" rx="22" fill="#B5C8AC"/>
+                                        <!-- Texture sfere / scultura -->
+                                        <circle cx="22" cy="24" r="20" fill="#C4D4BC"/>
+                                        <circle cx="62" cy="24" r="20" fill="#A6BC9C"/>
+                                        <circle cx="22" cy="62" r="20" fill="#B5C8AC"/>
+                                        <circle cx="62" cy="62" r="20" fill="#9BB390"/>
+                                        <circle cx="22" cy="100" r="20" fill="#C4D4BC"/>
+                                        <circle cx="62" cy="100" r="20" fill="#A6BC9C"/>
+                                        <circle cx="22" cy="128" r="18" fill="#B5C8AC"/>
+                                        <circle cx="62" cy="128" r="18" fill="#9BB390"/>
+                                        <!-- Stoppino in cotone -->
+                                        <path d="M42 4 V-12" stroke="#465B3E" stroke-width="2.5" stroke-linecap="round"/>
+                                        <!-- Fiammella calda -->
+                                        <path d="M42 -32 C48 -22 49 -15 42 -13 C35 -15 36 -22 42 -32 Z" fill="#E5A93B"/>
+                                        <path d="M42 -26 C45 -20 45 -16 42 -15 C39 -16 39 -20 42 -26 Z" fill="#FFF3D1"/>
+                                    </g>
+
+                                    <!-- Candela in Vasetto Ambra/Crema -->
+                                    <g transform="translate(168, 235)">
+                                        <rect x="0" y="0" width="76" height="85" rx="14" fill="#F9F6F0" stroke="#D6E1D0" stroke-width="2"/>
+                                        <rect x="6" y="6" width="64" height="12" rx="6" fill="#E6DCCB"/>
+                                        <!-- Etichetta artigianale -->
+                                        <rect x="14" y="28" width="48" height="36" rx="6" fill="#EBF0E8"/>
+                                        <line x1="22" y1="40" x2="54" y2="40" stroke="#58724D" stroke-width="2" stroke-linecap="round"/>
+                                        <line x1="26" y1="48" x2="50" y2="48" stroke="#91AC85" stroke-width="1.5" stroke-linecap="round"/>
+                                        <line x1="30" y1="55" x2="46" y2="55" stroke="#B39162" stroke-width="1.5" stroke-linecap="round"/>
+                                    </g>
+
+                                    <!-- Base d'appoggio -->
+                                    <line x1="30" y1="322" x2="290" y2="322" stroke="#B5C8AC" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                                
+                                <div class="mt-2 text-center">
+                                    <p class="font-serif italic text-lg text-sage-800">"Ogni colore racconta un'emozione naturale"</p>
+                                </div>
+                            </div>
                         </div>
-                        <figcaption class="absolute -bottom-5 left-4 right-4 sm:left-8 sm:right-8 rounded-2xl bg-white/95 backdrop-blur-md px-4 py-3 shadow-lg border border-sage-200 text-center">
-                            <p class="font-serif italic text-lg sm:text-xl text-sage-800">Ogni creazione è un piccolo pezzo unico.</p>
-                            <p class="text-[10px] uppercase tracking-[0.18em] text-sage-600 mt-1">Realizzato a mano con cura</p>
-                        </figcaption>
-                    </figure>
+                        
+                        <!-- Badge flottante -->
+                        <div class="absolute -bottom-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-sage-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center text-sage-700">
+                                <i data-lucide="leaf" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-sage-900">Biodegradabile & Vegana</p>
+                                <p class="text-[11px] text-sage-600">Profumazioni senza ftalati</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -256,7 +302,7 @@
     <!-- Sezione Vantaggi della Cera Ecolive -->
     <section id="cera-ecolive" class="py-20 bg-sage-100/70 border-y border-sage-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5 space-y-5">
                     <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sage-600">La Materia Prima</span>
                     <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-sage-900 leading-tight">
@@ -383,11 +429,11 @@
                     <h4 class="font-serif text-xl font-semibold text-cream-50">Contatta Fortuna</h4>
                     <p class="text-sm text-sage-300">Hai una richiesta speciale, vuoi un colore particolare o info per bomboniere? Scrivimi!</p>
                     <div class="flex flex-wrap gap-3 pt-1">
-                        <a href="https://www.instagram.com/i_coloridimartina/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
                             <i data-lucide="instagram" class="w-4 h-4 text-gold-400"></i>
                             Instagram
                         </a>
-                        <a href="https://wa.me/393337183658" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
                             <i data-lucide="message-circle" class="w-4 h-4 text-sage-300"></i>
                             WhatsApp
                         </a>
@@ -436,7 +482,7 @@
             <div class="grid grid-cols-1 gap-2.5">
                 <button onclick="copyOrderForSocial()" class="w-full py-3.5 px-4 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 font-medium text-sm transition-all shadow-sm flex items-center justify-center gap-2">
                     <i data-lucide="copy" class="w-4 h-4"></i>
-                    Invia riepilogo su WhatsApp
+                    Copia Riepilogo per WhatsApp / Instagram
                 </button>
                 <button onclick="openCheckoutModal()" class="w-full py-3 px-4 rounded-full bg-white hover:bg-sage-100 text-sage-800 border border-sage-300 font-medium text-sm transition-all flex items-center justify-center gap-2">
                     <i data-lucide="send" class="w-4 h-4"></i>
@@ -489,18 +535,9 @@
                     <textarea id="prod-desc" rows="3" required placeholder="Descrivi la forma, il peso in grammi e i colori disponibili..." class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500"></textarea>
                 </div>
 
-                <div class="rounded-2xl border border-sage-200 bg-white p-4 space-y-3">
-                    <label for="prod-image-file" class="block text-xs font-semibold uppercase tracking-wider text-sage-700">Fotografia della creazione</label>
-                    <input type="file" id="prod-image-file" accept="image/*" class="block w-full text-sm text-sage-700 file:mr-3 file:rounded-full file:border-0 file:bg-sage-100 file:px-4 file:py-2 file:font-medium file:text-sage-800 hover:file:bg-sage-200">
-                    <p class="text-xs text-sage-500">Scegli una foto direttamente dal telefono o dal computer: verrà ridimensionata e salvata con il prodotto. Non serve scrivere percorsi o caricarla a mano su GitHub.</p>
-                    <img id="prod-image-preview" alt="Anteprima della foto scelta" class="hidden max-h-48 w-auto max-w-full rounded-xl object-contain border border-sage-100">
-                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-sage-500" for="prod-image">Oppure, se la foto è già nella cartella images, inserisci il percorso</label>
-                    <input type="text" id="prod-image" placeholder="images/nome-foto.jpeg" class="w-full rounded-xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
-                </div>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Stile Card (se non inserisci una foto)</label>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-sage-700 mb-1">Stile Illustrazione Card</label>
                         <select id="prod-style" class="w-full rounded-2xl border border-sage-300 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500">
                             <option value="bubble">Candela Bubble / Cubo</option>
                             <option value="pillar">Candela Scultura Scanalata</option>
@@ -545,7 +582,7 @@
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
-            <p class="text-sm text-sage-700 mb-5">Lascia i tuoi recapiti: si aprirà WhatsApp con il riepilogo già compilato. Ti basterà premere Invia per mandare la richiesta a Fortuna.</p>
+            <p class="text-sm text-sage-700 mb-5">Lascia i tuoi recapiti: Fortuna riceverà il riepilogo delle creazioni scelte e ti ricontatterà per confermare colori, tempi di realizzo e spedizione.</p>
             
             <form onsubmit="submitOrderRequest(event)" class="space-y-4">
                 <div>
@@ -585,7 +622,7 @@
                 id: 'prod-2',
                 name: 'Vasetto "Quiete Mediterranea"',
                 price: 18.00,
-                image: "composizione-floreale.jpeg",
+                image: "VasoDiamonds.jpg"
                 category: 'Candele in Vasetto',
                 scent: 'Fico selvatico, bergamotto e vaniglia naturale',
                 description: 'Candela in bicchiere di vetro riutilizzabile con tappo in legno naturale e stoppino in puro cotone. Durata circa 35 ore.',
@@ -614,7 +651,6 @@
             },
             {
                 id: 'prod-5',
-                image: 'scultura-volto-floreale.jpeg',
                 name: 'Candela Fiore "Peonia d\'Alba"',
                 price: 12.50,
                 category: 'Candele Scultura',
@@ -636,19 +672,10 @@
         ];
 
         // Stato dell'applicazione
-        const savedProducts = JSON.parse(localStorage.getItem('martina_products') || 'null');
-        let products = Array.isArray(savedProducts)
-            ? savedProducts.map(saved => {
-                const original = defaultProducts.find(item => item.id === saved.id);
-                return { ...(original || {}), ...saved, image: saved.image || (original && original.image) || '' };
-              })
-            : [...defaultProducts];
+        let products = JSON.parse(localStorage.getItem('martina_products')) || [...defaultProducts];
         let cart = JSON.parse(localStorage.getItem('martina_cart')) || [];
         let currentCategory = 'Tutte';
         let isManageMode = false;
-        const WHATSAPP_NUMBER = '393337183658'; // Numero di Fortuna, formato internazionale senza +
-        let selectedProductImageData = '';
-
 
         // Palette colori per le illustrazioni SVG delle card
         const colorPalettes = {
@@ -813,9 +840,7 @@
                         <!-- Immagine / Illustrazione Artigianale -->
                         <div class="relative aspect-[4/3] overflow-hidden bg-sage-100">
                             <div class="w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                ${product.image
-                                    ? `<img src="${product.image}" alt="${product.name}" loading="lazy" class="w-full h-full object-cover">`
-                                    : getProductIllustrationSVG(product.style, product.color)}
+                                ${getProductIllustrationSVG(product.style, product.color)}
                             </div>
                             <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[11px] font-semibold text-sage-800 shadow-xs">
                                 ${product.category}
@@ -972,36 +997,36 @@
             }
         }
 
-        // Prepara il riepilogo e apre WhatsApp con il messaggio già compilato.
-        function buildOrderMessage(customerName = '', customerContact = '') {
+        // Copia riepilogo ordine negli appunti per WhatsApp / Instagram
+        function copyOrderForSocial() {
+            if (cart.length === 0) return;
             const notes = document.getElementById('order-notes').value.trim();
             let total = 0;
-            let message = "🌿 Ciao Fortuna! Vorrei richiedere queste creazioni da 'I Colori di Martina':\n\n";
-            if (customerName) message += `Nome: ${customerName}\n`;
-            if (customerContact) message += `Recapito: ${customerContact}\n`;
-            if (customerName || customerContact) message += '\n';
+            let text = "🌿 Ciao Fortuna! Vorrei richiedere queste creazioni da 'I colori di Martina':\n\n";
+            
             cart.forEach(item => {
-                const subtotal = item.price * item.qty;
-                total += subtotal;
-                message += `• ${item.qty} x ${item.name} (${formatPrice(subtotal)})\n`;
+                const sub = item.price * item.qty;
+                total += sub;
+text += `• ${item.qty}x ${item.name} (${formatPrice(sub)})\n`;
             });
-            message += `\nTotale stimato: ${formatPrice(total)}`;
-            if (notes) message += `\nNote/Preferenze: ${notes}`;
-            message += '\n\nGrazie!';
-            return message;
-        }
-
-        function openWhatsAppWithMessage(message) {
-            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank', 'noopener,noreferrer');
-        }
-
-        function copyOrderForSocial() {
-            if (cart.length === 0) {
-                showToast('Aggiungi almeno una creazione al carrello.', 'info');
-                return;
+            
+            text += `\nTotale stimato: ${formatPrice(total)}`;
+            if (notes) {
+                text += `\nNote/Preferenze: ${notes}`;
             }
-            openWhatsAppWithMessage(buildOrderMessage());
+
+            // Uso di execCommand('copy') per compatibilità iframe
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = text;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Riepilogo copiato! Incollalo su WhatsApp o Instagram.');
+            } catch (err) {
+                showToast('Impossibile copiare automaticamente.', 'info');
+            }
+            document.body.removeChild(tempTextarea);
         }
 
         // Modale Checkout Rapido
@@ -1019,17 +1044,13 @@
 
         function submitOrderRequest(e) {
             e.preventDefault();
-            if (cart.length === 0) {
-                showToast('Il carrello è vuoto: aggiungi prima una creazione.', 'info');
-                return;
-            }
-            const name = document.getElementById('cust-name').value.trim();
-            const contact = document.getElementById('cust-contact').value.trim();
-            const message = buildOrderMessage(name, contact);
-            openWhatsAppWithMessage(message);
+            const name = document.getElementById('cust-name').value;
+            cart = [];
+            saveCart();
+            updateCartUI();
             closeCheckoutModal();
             toggleCartDrawer(false);
-            showToast('WhatsApp si è aperto con la richiesta pronta: premi Invia per mandarla a Fortuna.');
+            showToast(`Grazie ${name}! Richiesta inviata a Fortuna.`);
         }
 
         // Modalità Gestione Vetrina (Aggiunta / Modifica Creazioni e Prezzi)
@@ -1052,50 +1073,6 @@
             renderProducts();
         }
 
-        // Riduce la foto scelta dal dispositivo, così occupa meno spazio nel browser.
-        function resizeImageForProduct(file) {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onerror = () => reject(new Error('Impossibile leggere la foto.'));
-                reader.onload = () => {
-                    const image = new Image();
-                    image.onerror = () => reject(new Error('Il file scelto non è un’immagine valida.'));
-                    image.onload = () => {
-                        const maxSide = 1400;
-                        const scale = Math.min(1, maxSide / Math.max(image.width, image.height));
-                        const canvas = document.createElement('canvas');
-                        canvas.width = Math.round(image.width * scale);
-                        canvas.height = Math.round(image.height * scale);
-                        const context = canvas.getContext('2d');
-                        context.drawImage(image, 0, 0, canvas.width, canvas.height);
-                        resolve(canvas.toDataURL('image/jpeg', 0.82));
-                    };
-                    image.src = reader.result;
-                };
-                reader.readAsDataURL(file);
-            });
-        }
-
-        document.getElementById('prod-image-file').addEventListener('change', async function () {
-            const file = this.files && this.files[0];
-            const preview = document.getElementById('prod-image-preview');
-            if (!file) return;
-            if (!file.type.startsWith('image/')) {
-                showToast('Scegli un file immagine, per esempio JPG o PNG.', 'info');
-                this.value = '';
-                return;
-            }
-            try {
-                selectedProductImageData = await resizeImageForProduct(file);
-                preview.src = selectedProductImageData;
-                preview.classList.remove('hidden');
-                document.getElementById('prod-image').value = '';
-                showToast('Foto caricata: ricordati di salvare la creazione.');
-            } catch (error) {
-                showToast(error.message || 'Non riesco a caricare questa foto.', 'info');
-            }
-        });
-
         function openProductModal(productId = null) {
             const modal = document.getElementById('product-modal');
             const title = document.getElementById('product-modal-title');
@@ -1108,11 +1085,7 @@
                 document.getElementById('prod-id').value = p.id;
                 document.getElementById('prod-name').value = p.name;
                 document.getElementById('prod-price').value = p.price;
-                selectedProductImageData = (p.image && p.image.startsWith('data:image/')) ? p.image : '';
-                document.getElementById('prod-image').value = (p.image && !p.image.startsWith('data:image/')) ? p.image : '';
-                document.getElementById('prod-image-file').value = '';
-                const imagePreview = document.getElementById('prod-image-preview');
-                if (p.image) { imagePreview.src = p.image; imagePreview.classList.remove('hidden'); } else { imagePreview.removeAttribute('src'); imagePreview.classList.add('hidden'); }
+                document.getElementById('prod-image').value = p.image;
                 document.getElementById('prod-category').value = p.category;
                 document.getElementById('prod-scent').value = p.scent || '';
                 document.getElementById('prod-desc').value = p.description;
@@ -1121,9 +1094,6 @@
             } else {
                 title.textContent = 'Nuova Creazione in Cera';
                 form.reset();
-                selectedProductImageData = '';
-                document.getElementById('prod-image-preview').removeAttribute('src');
-                document.getElementById('prod-image-preview').classList.add('hidden');
                 document.getElementById('prod-id').value = '';
             }
 
@@ -1137,12 +1107,9 @@
             modal.classList.remove('flex');
         }
 
-        async function saveProductForm(e) {
+        function saveProductForm(e) {
             e.preventDefault();
             const id = document.getElementById('prod-id').value;
-            const existing = id ? products.find(p => p.id === id) : null;
-            const typedPath = document.getElementById('prod-image').value.trim();
-            const imageValue = selectedProductImageData || typedPath || (existing && existing.image) || '';
             const newProductData = {
                 id: id || 'prod-' + Date.now(),
                 name: document.getElementById('prod-name').value.trim(),
@@ -1150,12 +1117,10 @@
                 category: document.getElementById('prod-category').value,
                 scent: document.getElementById('prod-scent').value.trim(),
                 description: document.getElementById('prod-desc').value.trim(),
-                image: imageValue,
                 style: document.getElementById('prod-style').value,
                 color: document.getElementById('prod-color').value
             };
 
-            const previousProducts = [...products];
             if (id) {
                 const idx = products.findIndex(p => p.id === id);
                 if (idx !== -1) products[idx] = newProductData;
@@ -1165,15 +1130,9 @@
                 showToast('Nuova creazione aggiunta in vetrina!');
             }
 
-            try {
-                localStorage.setItem('martina_products', JSON.stringify(products));
-                selectedProductImageData = '';
-                closeProductModal();
-                renderProducts();
-            } catch (error) {
-                products = previousProducts;
-                showToast('La memoria del browser è piena. Prova una foto più piccola.', 'info');
-            }
+            localStorage.setItem('martina_products', JSON.stringify(products));
+            closeProductModal();
+            renderProducts();
         }
 
         function deleteProduct(productId) {
