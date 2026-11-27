@@ -56,11 +56,12 @@
   },
   {
     "id": "prod-6",
-    "name": "Candela Arco \"Brezzamarina\"",
-    "price": 17.5,
+    "name": "Candela Forever",
+    "price": 10,
     "category": "Candele Scultura",
-    "scent": "Sale marino, salvia sclarea e eucalipto",
-    "description": "Design contemporaneo a doppio arco in tonalità verde salvia tenue. Realizzata artigianalmente pezzo per pezzo.",
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-27-at-153412.jpeg",
+    "scent": "Vaniglia e Patchouli",
+    "description": "Un cuore per ricordare i nostri amati.\nPossibilità di fare colori differenti",
     "style": "arch",
     "color": "sage"
   }
