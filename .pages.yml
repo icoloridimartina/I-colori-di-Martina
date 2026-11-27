@@ -33,8 +33,16 @@ content:
             - Candele in Vasetto
             - Cera da Sciogliere
       - name: image
-        label: Fotografia del prodotto
+        label: Fotografia principale
         type: image
+      - name: gallery
+        label: Altre fotografie del prodotto
+        type: image
+        options:
+          multiple:
+            max: 8
+          unique: true
+          extensions: [jpg, jpeg, png, webp]
       - name: scent
         label: Profumazione
         type: string
