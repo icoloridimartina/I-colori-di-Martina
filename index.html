@@ -14,43 +14,43 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
- colors: {
-	 sage: {
-         50: '#F6F8F5',
-         100: '#EBF0E8',
-         200: '#D6E1D0',
-         300: '#B5C8AC',
-         400: '#91AC85',
-         500: '#729065',
-         600: '#58724D',
-         700: '#465B3E',
-         800: '#394A33',
-         900: '#2F3D2B',
-             },
-}
-                        },
-                        cream: {
-                            50: '#FDFCFB',
-                            100: '#F9F6F0',
-                            200: '#F2ECE1',
-                            300: '#E6DCCB',
-                        },
-                        gold: {
-                            400: '#C8A97E',
-                            500: '#B39162',
-                            600: '#96764A',
-                        }
-                    }
+
+tailwind.config = {
+    theme: {
+        extend: {
+            fontFamily: {
+                serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+                sage: {
+                    50: '#F0F4EC',
+                    100: '#DCE8D5',
+                    200: '#C2D5B6',
+                    300: '#A8BF96',
+                    400: '#85A76F',
+                    500: '#6F9258',
+                    600: '#587A45',
+                    700: '#496B3D',
+                    800: '#38552F',
+                    900: '#293F24',
+                },
+                cream: {
+                    50: '#F7F6EF',
+                    100: '#F0EDE2',
+                    200: '#E6E0D1',
+                    300: '#D9CFBA',
+                },
+                gold: {
+                    400: '#C8A97E',
+                    500: '#B39162',
+                    600: '#96764A',
                 }
             }
         }
+    }
+}
+
     </script>
     <style>
         html { scroll-padding-top: 5.5rem; }
@@ -62,40 +62,6 @@
     </style>
 </head>
 <body class="bg-cream-50 text-sage-900 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
-
-/* Verde più presente negli sfondi del sito */
-body {
-    background-color: #F1F3EA !important;
-}
-
-header {
-    background-color: #E7EEE1 !important;
-}
-
-#creazioni,
-#come-ordinare {
-    background-color: #E7EFE2 !important;
-}
-
-#cera-ecolive {
-    background-color: #DCE8D5 !important;
-}
-
-/* Hero iniziale più verde */
-section.bg-gradient-to-b {
-    background-image: linear-gradient(
-        180deg,
-        #D4E3CB 0%,
-        #E2EBDD 55%,
-        #F1F3EA 100%
-    ) !important;
-}
-
-/* Elementi chiari con una sfumatura verde */
-.bg-cream-50 {
-    background-color: #F5F5ED !important;
-}
-
     <!-- Toast Notification Container (Sostituisce alert()) -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
