@@ -34,22 +34,23 @@
   },
   {
     "id": "prod-4",
-    "name": "Scrigno Wax Melts \"Giardino Segreto\"",
-    "price": 9.5,
+    "name": "glass teddy",
+    "price": 15,
     "category": "Cera da Sciogliere",
-    "scent": "Fiori d'arancio, gelsomino e muschio bianco",
-    "description": "Confezione da 8 cialde profumate a forma di cuore e foglia da sciogliere nel bruciaessenze. Profumazione intensa e duratura.",
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-26-at-153854.jpeg",
+    "scent": "Frangipane",
+    "description": "Ampolla di vetro con un piccolo teddy appoggiato ad una margherita, adatto come regalo o bomboniera per eventi speciali!\n\ncompletamente personalizzabile",
     "style": "melts",
-    "color": "sage"
+    "color": "cream"
   },
   {
     "id": "prod-5",
-    "name": "Candela Fiore \"Peonia d'Alba\"",
-    "price": 12.5,
+    "name": "Vaso \"Amore\"",
+    "price": 42,
     "category": "Candele Scultura",
-    "image": "/I-colori-di-Martina/images/scultura-volto-floreale.jpeg",
-    "scent": "Rosa damascena e peonia bianca",
-    "description": "Delicata scultura floreale ricca di petali scolpiti nella cera. Perfetta anche come idea regalo o segnaposto per cerimonie.",
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-26-at-153853-1-1.jpeg",
+    "scent": "Frangipane",
+    "description": "Delicata scultura floreale ricca di petali scolpiti nella cera, con coppia innamorata che fa da sfondo principale al bellissimo giardino, perfetta come complemento d'arredo e da regalare.",
     "style": "flower",
     "color": "sand"
   },
