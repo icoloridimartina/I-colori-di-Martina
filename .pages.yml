@@ -1,0 +1,53 @@
+media:
+  input: images
+  output: /I-colori-di-Martina/images
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: products
+    label: Catalogo prodotti
+    type: file
+    path: data/products.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: ID interno
+        type: string
+        hidden: true
+      - name: name
+        label: Nome del prodotto
+        type: string
+        required: true
+      - name: price
+        label: Prezzo in euro
+        type: number
+        required: true
+      - name: category
+        label: Categoria
+        type: select
+        options:
+          values:
+            - Candele Scultura
+            - Candele in Vasetto
+            - Cera da Sciogliere
+      - name: image
+        label: Fotografia del prodotto
+        type: image
+      - name: scent
+        label: Profumazione
+        type: string
+      - name: description
+        label: Descrizione
+        type: text
+      - name: style
+        label: Illustrazione di riserva
+        type: select
+        options:
+          values: [bubble, jar, pillar, melts, flower, arch]
+      - name: color
+        label: Colore di riserva
+        type: select
+        options:
+          values: [sage, olive, cream, sand]
