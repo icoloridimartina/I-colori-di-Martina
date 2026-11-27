@@ -379,7 +379,7 @@
                     <h4 class="font-serif text-xl font-semibold text-cream-50">Contatta Fortuna</h4>
                     <p class="text-sm text-sage-300">Hai una richiesta speciale, vuoi un colore particolare o info per bomboniere? Scrivimi!</p>
                     <div class="flex flex-wrap gap-3 pt-1">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
+                        <a href="https://www.instagram.com/i_coloridimartina/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-sage-800 hover:bg-sage-700 text-cream-50 text-sm font-medium transition-colors border border-sage-700">
                             <i data-lucide="instagram" class="w-4 h-4 text-gold-400"></i>
                             Instagram
                         </a>
@@ -1136,7 +1136,20 @@
         }
 
         // Inizializzazione al caricamento
-        window.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('DOMContentLoaded', async () => {
+            // Mantiene il catalogo di esempio come riserva se il file dati non è raggiungibile.
+            try {
+                const response = await fetch('data/products.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('Catalogo non disponibile');
+                const savedProducts = await response.json();
+                products = savedProducts.map((product, index) => ({
+                    ...product,
+                    id: product.id || 'prod-' + String(product.name || 'creazione')
+                        .toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + index
+                }));
+            } catch (error) {
+                console.error('Impossibile caricare il catalogo aggiornato:', error);
+            }
             renderProducts();
             updateCartUI();
             lucide.createIcons();

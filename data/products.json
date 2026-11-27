@@ -1,0 +1,66 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Vaso \"Diamonds\"",
+    "price": 40,
+    "category": "Candele Scultura",
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-26-at-150821.jpeg",
+    "scent": "Frangipane",
+    "description": "Vaso in vetro ricoperto di fiori in cera ecolive e veri fiori secchi che donano un tocco di classe ed eleganza, personalizzabile in qualsiasi colore!",
+    "style": "flower",
+    "color": "sage"
+  },
+  {
+    "id": "prod-2",
+    "name": "La Dea Dorata",
+    "price": 8,
+    "category": "Candele Scultura",
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-26-at-153853.jpeg",
+    "scent": "Vaniglia e Patchouli",
+    "description": "Una dea in cera ecolive poggiata su un giardino di ortensie su base in vetro trasparente, ottima come regalo e come bomboniera per i tuoi eventi speciali!\n\nCompletamente personalizzabile",
+    "style": "arch",
+    "color": "cream"
+  },
+  {
+    "id": "prod-3",
+    "name": "Peonia",
+    "price": 15,
+    "category": "Candele Scultura",
+    "image": "/I-colori-di-Martina/images/whatsapp-image-2026-11-26-at-153853-2.jpeg",
+    "scent": "Cotton",
+    "description": "Elegante peonia sfumata, adatta  a qualisasi evento e personalizzabile in qualsiasi colore!\nInsieme decideremo come renderla perfetta per te ",
+    "style": "flower",
+    "color": "sand"
+  },
+  {
+    "id": "prod-4",
+    "name": "Scrigno Wax Melts \"Giardino Segreto\"",
+    "price": 9.5,
+    "category": "Cera da Sciogliere",
+    "scent": "Fiori d'arancio, gelsomino e muschio bianco",
+    "description": "Confezione da 8 cialde profumate a forma di cuore e foglia da sciogliere nel bruciaessenze. Profumazione intensa e duratura.",
+    "style": "melts",
+    "color": "sage"
+  },
+  {
+    "id": "prod-5",
+    "name": "Candela Fiore \"Peonia d'Alba\"",
+    "price": 12.5,
+    "category": "Candele Scultura",
+    "image": "/I-colori-di-Martina/images/scultura-volto-floreale.jpeg",
+    "scent": "Rosa damascena e peonia bianca",
+    "description": "Delicata scultura floreale ricca di petali scolpiti nella cera. Perfetta anche come idea regalo o segnaposto per cerimonie.",
+    "style": "flower",
+    "color": "sand"
+  },
+  {
+    "id": "prod-6",
+    "name": "Candela Arco \"Brezzamarina\"",
+    "price": 17.5,
+    "category": "Candele Scultura",
+    "scent": "Sale marino, salvia sclarea e eucalipto",
+    "description": "Design contemporaneo a doppio arco in tonalità verde salvia tenue. Realizzata artigianalmente pezzo per pezzo.",
+    "style": "arch",
+    "color": "sage"
+  }
+]
