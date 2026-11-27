@@ -1136,7 +1136,20 @@
         }
 
         // Inizializzazione al caricamento
-        window.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('DOMContentLoaded', async () => {
+            // Mantiene il catalogo di esempio come riserva se il file dati non è raggiungibile.
+            try {
+                const response = await fetch('data/products.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('Catalogo non disponibile');
+                const savedProducts = await response.json();
+                products = savedProducts.map((product, index) => ({
+                    ...product,
+                    id: product.id || 'prod-' + String(product.name || 'creazione')
+                        .toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + index
+                }));
+            } catch (error) {
+                console.error('Impossibile caricare il catalogo aggiornato:', error);
+            }
             renderProducts();
             updateCartUI();
             lucide.createIcons();
